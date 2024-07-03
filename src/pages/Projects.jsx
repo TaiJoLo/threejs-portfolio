@@ -2,6 +2,7 @@ import React from "react";
 import { projects } from "../constants";
 import { Link } from "react-router-dom";
 import { arrow } from "../assets/icons";
+import { FaGlobe } from "react-icons/fa";
 import CTA from "../components/CTA";
 
 const Projects = () => {
@@ -15,16 +16,8 @@ const Projects = () => {
       </h1>
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          Welcome to the heart of my digital journey! Here, lines of code
-          transcend into dynamic projects, each a testament to my passion for
-          innovation and precision in web development. Explore a curated
-          collection where creativity meets functionality, and concepts
-          transform into tangible digital experiences. From responsive web
-          designs to intuitive applications, join me on a visual odyssey through
-          the diverse landscapes of my digital portfolio. Each project
-          encapsulates not just code but a narrative of problem-solving,
-          creativity, and the relentless pursuit of excellence. Dive in and
-          discover the artistry of technology in every pixel and line of code.
+          Welcome to my portfolio! Here, you'll find projects that showcase my
+          web development skills and practical coding expertise.
         </p>
       </div>
       <div className="flex flex-wrap my-20 gap-16">
@@ -45,13 +38,14 @@ const Projects = () => {
                 {project.name}
               </h4>
               <p className="mt-2 text-slate-500">{project.description}</p>
-              <div className="mt-5 flex tiems-center gap-2 font-poppins">
+              <div className="flex items-center gap-2 mt-8">
                 <Link
                   to={project.link}
-                  target="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-semibold text-blue-600"
                 >
-                  Live Link
+                  Link
                 </Link>
                 <img
                   src={arrow}

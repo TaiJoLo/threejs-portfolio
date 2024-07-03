@@ -1,0 +1,48 @@
+.tooltip-trigger .tooltip {
+  opacity: 0;
+}
+
+.tooltip-trigger:hover .tooltip {
+  opacity: 1;
+}
+
+.tooltip-trigger {
+  position: relative;
+  display: inline;
+}
+
+.tooltip-trigger .tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(
+    100% + 25px
+  ); /* Adjust the distance between the tooltip and the trigger */
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 200px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.tooltip-top {
+  bottom: 105%;
+  left: 0%;
+}
+
+/* .tooltip-trigger .tooltip-top::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #00c6ff transparent transparent transparent;
+} */

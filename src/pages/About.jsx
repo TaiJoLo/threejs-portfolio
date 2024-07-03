@@ -1,6 +1,6 @@
 import React from "react";
 
-import { skills, experiences } from "../constants";
+import { skills, experiences, socialLinks } from "../constants";
 
 import {
   VerticalTimeline,
@@ -8,6 +8,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import CTA from "../components/CTA";
+import Tooltip from "../components/Tooltip";
 
 const About = () => {
   return (
@@ -20,8 +21,7 @@ const About = () => {
       </h1>
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          Self-learner turned Master of Applied Computing student, I am on a
-          mission to fuse creativity with code. From the early days of
+          I am on a mission to fuse creativity with code. From the early days of
           self-discovery in web development to my current pursuit of mastery,
           I've evolved into a digital enthusiast with an insatiable appetite for
           innovation.
@@ -32,22 +32,66 @@ const About = () => {
 
         <div className="mt-16 flex flex-wrap gap-12">
           {skills.map((skill) => (
-            <div className="block-container w-20 h-20" key={skill.name}>
-              <div className="btn-back rounded-xl" />
-              <div className="btn-front rounded-xl flex justify-center items-center">
-                <img
-                  src={skill.imageUrl}
-                  alt={skill.name}
-                  className="w-1/2 h-1/2 object-contain"
-                />
+            <Tooltip tooltipText={skill.name}>
+              <div className="block-container w-20 h-20" key={skill.name}>
+                <div className="btn-back rounded-xl" />
+
+                <div className="btn-front rounded-xl flex justify-center items-center">
+                  <img
+                    src={skill.imageUrl}
+                    alt={skill.name}
+                    className="w-1/2 h-1/2 object-contain"
+                  />
+                </div>
               </div>
+            </Tooltip>
+          ))}
+        </div>
+      </div>
+      <div className="py-10 flex flex-col">
+        <h3 className="subhead-text">Social Links</h3>
+
+        <div className="mt-16 flex flex-wrap gap-12">
+          {socialLinks.map((socialLink) => (
+            <div key={socialLink.name}>
+              {socialLink.hasLink ? (
+                <a
+                  href={socialLink.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="block-container w-20 h-20">
+                    <div className="btn-back rounded-xl" />
+                    <div className="btn-front rounded-xl flex justify-center items-center">
+                      <img
+                        src={socialLink.iconUrl}
+                        alt={socialLink.name}
+                        className="w-1/2 h-1/2 object-contain"
+                      />
+                    </div>
+                  </div>
+                </a>
+              ) : (
+                <Tooltip tooltipText={socialLink.name}>
+                  <div className="block-container w-20 h-20">
+                    <div className="btn-back rounded-xl" />
+                    <div className="btn-front rounded-xl flex justify-center items-center">
+                      <img
+                        src={socialLink.iconUrl}
+                        alt={socialLink.name}
+                        className="w-1/2 h-1/2 object-contain"
+                      />
+                    </div>
+                  </div>
+                </Tooltip>
+              )}
             </div>
           ))}
         </div>
       </div>
 
-      <div className="py-16">
-        <h3 className="subhead-text">Educational Journey</h3>
+      {/* <div className="py-16">
+        <h3 className="subhead-text">Social Links</h3>
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
           <p>
             Self-learner turned Master of Applied Computing student, I am on a
@@ -106,7 +150,7 @@ const About = () => {
             ))}
           </VerticalTimeline>
         </div>
-      </div>
+      </div> */}
       <hr className="border-slate-200" />
       <CTA />
     </section>

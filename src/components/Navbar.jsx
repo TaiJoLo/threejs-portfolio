@@ -28,6 +28,17 @@ const Navbar = () => {
         >
           Projects
         </NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            isActive ? "text-blue-500" : "text-black"
+          }
+        >
+          Contact
+        </NavLink>
+        <a href="https://laurenlo-blog.netlify.app" className="text-black">
+          Blog
+        </a>
       </nav>
     </header>
   );

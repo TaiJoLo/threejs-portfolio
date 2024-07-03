@@ -13,7 +13,6 @@ import {
   mongodb,
   motion,
   mui,
-  nextjs,
   nodejs,
   pricewise,
   react,
@@ -24,73 +23,60 @@ import {
   tailwindcss,
   threads,
   typescript,
+  graphql,
+  firebase,
+  styledComponents,
+  jest,
+  python,
+  r,
+  gcp,
+  threejs,
+  message,
+  apple,
+  sql,
+  sas,
+  // nextjs,
+  // gsap,
 } from "../assets/icons";
 
 export const skills = [
   {
-    imageUrl: css,
-    name: "CSS",
-    type: "Frontend",
+    imageUrl: python,
+    name: "Python",
+    type: "Programming Language",
   },
-  {
-    imageUrl: express,
-    name: "Express",
-    type: "Backend",
-  },
-  {
-    imageUrl: git,
-    name: "Git",
-    type: "Version Control",
-  },
-  {
-    imageUrl: github,
-    name: "GitHub",
-    type: "Version Control",
-  },
+
   {
     imageUrl: html,
     name: "HTML",
     type: "Frontend",
   },
   {
+    imageUrl: css,
+    name: "CSS",
+    type: "Frontend",
+  },
+
+  {
     imageUrl: javascript,
     name: "JavaScript",
     type: "Frontend",
   },
   {
-    imageUrl: mongodb,
-    name: "MongoDB",
-    type: "Database",
+    imageUrl: threejs,
+    name: "Three.js",
+    type: "Animation Library",
   },
-  {
-    imageUrl: motion,
-    name: "Motion",
-    type: "Animation",
-  },
-  {
-    imageUrl: mui,
-    name: "Material-UI",
-    type: "Frontend",
-  },
-  {
-    imageUrl: nextjs,
-    name: "Next.js",
-    type: "Frontend",
-  },
-  {
-    imageUrl: nodejs,
-    name: "Node.js",
-    type: "Backend",
-  },
+  // {
+  //   imageUrl: gsap,
+  //   name: "GSP",
+  //   type: "Animation Library",
+  // },
+
   {
     imageUrl: react,
     name: "React",
     type: "Frontend",
-  },
-  {
-    imageUrl: redux,
-    name: "Redux",
-    type: "State Management",
   },
   {
     imageUrl: sass,
@@ -103,10 +89,101 @@ export const skills = [
     type: "Frontend",
   },
   {
+    imageUrl: styledComponents,
+    name: "styled-components",
+    type: "Frontend",
+  },
+  {
     imageUrl: typescript,
     name: "TypeScript",
     type: "Frontend",
   },
+  {
+    imageUrl: nodejs,
+    name: "Node.js",
+    type: "Backend",
+  },
+  {
+    imageUrl: express,
+    name: "Express",
+    type: "Backend",
+  },
+  // {
+  //   imageUrl: nextjs,
+  //   name: "Next.js",
+  //   type: "Frontend",
+  // },
+  {
+    imageUrl: gcp,
+    name: "Google Cloud Platform",
+    type: "Cloud Computing Platform",
+  },
+
+  {
+    imageUrl: firebase,
+    name: "Firebase",
+    type: "Database",
+  },
+  {
+    imageUrl: graphql,
+    name: "GraphQL",
+    type: "Backend",
+  },
+  {
+    imageUrl: redux,
+    name: "Redux",
+    type: "State Management",
+  },
+  {
+    imageUrl: sql,
+    name: "SQL",
+    type: "Query Language",
+  },
+
+  {
+    imageUrl: mongodb,
+    name: "MongoDB",
+    type: "Database",
+  },
+  {
+    imageUrl: jest,
+    name: "Jest",
+    type: "Testing",
+  },
+  {
+    imageUrl: r,
+    name: "R",
+    type: "Programming Language",
+  },
+  {
+    imageUrl: sas,
+    name: "SAS",
+    type: "Statistical Analysis and Data Management Program",
+  },
+  {
+    imageUrl: git,
+    name: "Git",
+    type: "Version Control",
+  },
+  {
+    imageUrl: github,
+    name: "GitHub",
+    type: "Version Control",
+  },
+
+  /*
+  {
+    imageUrl: motion,
+    name: "Motion",
+    type: "Animation",
+  },
+  
+  {
+    imageUrl: mui,
+    name: "Material-UI",
+    type: "Frontend",
+  },
+  */
 ];
 
 export const experiences = [
@@ -166,55 +243,77 @@ export const experiences = [
 
 export const socialLinks = [
   {
-    name: "Contact",
-    iconUrl: contact,
+    name: "Message",
+    iconUrl: message,
     link: "/contact",
+    hasLink: true,
   },
   {
     name: "GitHub",
     iconUrl: github,
-    link: "https://github.com/YourGitHubUsername",
+    link: "https://github.com/TaiJoLo",
+    hasLink: true,
   },
   {
     name: "LinkedIn",
     iconUrl: linkedin,
-    link: "https://www.linkedin.com/in/YourLinkedInUsername",
+    link: "https://www.linkedin.com/in/lotaijo/",
+    hasLink: true,
   },
 ];
 
 export const projects = [
   {
-    iconUrl: pricewise,
-    theme: "btn-back-red",
-    name: "Amazon Price Tracker",
+    iconUrl: estate,
+    theme: "btn-back-green",
+    name: "Places Sharing Application",
     description:
-      "Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.",
-    link: "https://github.com/adrianhajdin/pricewise",
+      "Built a fullstack web app for users to create, share, and explore places. Facilitates sign-up, login, and image uploads. Utilizes Google Maps for interactive exploration.",
+    link: "https://github.com/TaiJoLo/mern",
+    live: "",
   },
   {
     iconUrl: threads,
-    theme: "btn-back-green",
-    name: "Full Stack Threads Clone",
+    theme: "btn-back-blue",
+    name: "E-Commerce Website",
     description:
-      'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-    link: "https://github.com/adrianhajdin/threads",
+      "Created an e-commerce platform offering users the ability to sign up and log in, browse products, add and remove items to their shopping cart, and securely complete online payments.",
+    link: "https://github.com/TaiJoLo/crwn-clothing",
   },
   {
-    iconUrl: car,
-    theme: "btn-back-blue",
-    name: "Car Finding App",
+    iconUrl: summiz,
+    theme: "btn-back-yellow",
+    name: "News Sentiment Analysis Tool",
     description:
-      "Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.",
-    link: "https://github.com/adrianhajdin/project_next13_car_showcase",
+      "Developed a web tool for analyzing news articles' sentiment and subjectivity, offering users insights into the tone and perspective of their reading material.",
+    link: "https://github.com/TaiJoLo/udacity-evaluate-news-nlp",
   },
   {
     iconUrl: snapgram,
     theme: "btn-back-pink",
-    name: "Full Stack Instagram Clone",
+    name: "Staff Management Portal",
+    description:
+      "Built a web app for campground staff to manage bookings, view camper information, and handle customer data. Facilitates booking management, camper list viewing, and customer search.",
+    link: "https://github.com/TaiJoLo/scg",
+  },
+  // {
+  //   iconUrl: apple,
+  //   theme: "btn-back-pink",
+  //   name: "Apple website clone",
+  //   description:
+  //     "(need to edit)Developed a web tool for analyzing news articles' sentiment and subjectivity, offering users insights into the tone and perspective of their reading material.",
+  //   link: "https://github.com/TaiJoLo/udacity-evaluate-news-nlp",
+  // },
+  /*
+  {
+    iconUrl: snapgram,
+    theme: "btn-back-pink",
+    name: "T-Shirt",
     description:
       "Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.",
     link: "https://github.com/adrianhajdin/social_media_app",
   },
+ 
   {
     iconUrl: estate,
     theme: "btn-back-black",
@@ -231,4 +330,5 @@ export const projects = [
       "App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.",
     link: "https://github.com/adrianhajdin/project_ai_summarizer",
   },
+  */
 ];
