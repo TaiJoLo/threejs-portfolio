@@ -24,9 +24,21 @@ const About = () => {
           I am on a mission to fuse creativity with code. From the early days of
           self-discovery in web development to my current pursuit of mastery,
           I've evolved into a digital enthusiast with an insatiable appetite for
-          innovation.
+          innovation. With a diverse background in media creativity and
+          analytics, I combine technical acumen with creative insight to deliver
+          innovative solutions. Outside of coding, I enjoy camping, reading,
+          photography, and exploring new technologies.
         </p>
+        <div class="text-right">
+          <a
+            href="https://laurenlo-blog.netlify.app/blog/my-journey-into-web-development/"
+            className="mt-4 font-bold  hover:blue-gradient_text underline hover:neo-brutalism-blue transition duration-300"
+          >
+            Read my full story
+          </a>
+        </div>
       </div>
+
       <div className="py-10 flex flex-col">
         <h3 className="subhead-text">My Skills</h3>
 

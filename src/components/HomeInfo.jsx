@@ -28,7 +28,7 @@ const renderContect = {
   ),
   3: (
     <InfoBox
-      text="Explore my digital playground, where lines of code translate into dynamic projects. Each endeavor is a testament to my technical prowess and passion for pushing boundaries."
+      text="Explore my digital playground, where lines of code translate into dynamic projects."
       link="/projects"
       btnText="Visit my portfolio"
     />
