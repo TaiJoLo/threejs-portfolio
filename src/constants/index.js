@@ -35,6 +35,7 @@ import {
   apple,
   sql,
   sas,
+  email,
   // nextjs,
   // gsap,
 } from "../assets/icons";
@@ -243,12 +244,6 @@ export const experiences = [
 
 export const socialLinks = [
   {
-    name: "Message",
-    iconUrl: message,
-    link: "/contact",
-    hasLink: true,
-  },
-  {
     name: "GitHub",
     iconUrl: github,
     link: "https://github.com/TaiJoLo",
@@ -258,6 +253,21 @@ export const socialLinks = [
     name: "LinkedIn",
     iconUrl: linkedin,
     link: "https://www.linkedin.com/in/lotaijo/",
+    hasLink: true,
+  },
+];
+
+export const contactLinks = [
+  {
+    name: "Email",
+    iconUrl: email,
+    link: "mailto:laurenlo.work@gmail.com",
+    hasLink: true,
+  },
+  {
+    name: "Message",
+    iconUrl: message,
+    link: "/contact",
     hasLink: true,
   },
 ];

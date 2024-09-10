@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import { skills, experiences, socialLinks } from "../constants";
+import { skills, contactLinks, socialLinks } from "../constants";
 
 import {
   VerticalTimeline,
@@ -65,40 +66,67 @@ const About = () => {
 
         <div className="mt-16 flex flex-wrap gap-12">
           {socialLinks.map((socialLink) => (
-            <div key={socialLink.name}>
-              {socialLink.hasLink ? (
-                <a
-                  href={socialLink.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="block-container w-20 h-20">
-                    <div className="btn-back rounded-xl" />
-                    <div className="btn-front rounded-xl flex justify-center items-center">
-                      <img
-                        src={socialLink.iconUrl}
-                        alt={socialLink.name}
-                        className="w-1/2 h-1/2 object-contain"
-                      />
-                    </div>
+            <Tooltip tooltipText={socialLink.name}>
+              <a
+                href={socialLink.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="block-container w-20 h-20">
+                  <div className="btn-back rounded-xl" />
+                  <div className="btn-front rounded-xl flex justify-center items-center">
+                    <img
+                      src={socialLink.iconUrl}
+                      alt={socialLink.name}
+                      className="w-1/2 h-1/2 object-contain"
+                    />
                   </div>
-                </a>
-              ) : (
-                <Tooltip tooltipText={socialLink.name}>
-                  <div className="block-container w-20 h-20">
-                    <div className="btn-back rounded-xl" />
-                    <div className="btn-front rounded-xl flex justify-center items-center">
-                      <img
-                        src={socialLink.iconUrl}
-                        alt={socialLink.name}
-                        className="w-1/2 h-1/2 object-contain"
-                      />
-                    </div>
-                  </div>
-                </Tooltip>
-              )}
-            </div>
+                </div>
+              </a>
+            </Tooltip>
           ))}
+        </div>
+
+        <div className="py-10 flex flex-col">
+          <h3 className="subhead-text">Contact Me</h3>
+
+          <div className="mt-16 flex flex-wrap gap-12">
+            {contactLinks.map((contactLink) => (
+              <Tooltip tooltipText={contactLink.name}>
+                {contactLink.link.startsWith("/") ? (
+                  <Link to={contactLink.link}>
+                    <div className="block-container w-20 h-20">
+                      <div className="btn-back rounded-xl" />
+                      <div className="btn-front rounded-xl flex justify-center items-center">
+                        <img
+                          src={contactLink.iconUrl}
+                          alt={contactLink.name}
+                          className="w-1/2 h-1/2 object-contain"
+                        />
+                      </div>
+                    </div>
+                  </Link>
+                ) : (
+                  <a
+                    href={contactLink.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="block-container w-20 h-20">
+                      <div className="btn-back rounded-xl" />
+                      <div className="btn-front rounded-xl flex justify-center items-center">
+                        <img
+                          src={contactLink.iconUrl}
+                          alt={contactLink.name}
+                          className="w-1/2 h-1/2 object-contain"
+                        />
+                      </div>
+                    </div>
+                  </a>
+                )}
+              </Tooltip>
+            ))}
+          </div>
         </div>
       </div>
 
